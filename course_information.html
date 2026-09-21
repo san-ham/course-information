@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Course Information for Faculty Preference</title>
+
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f6f7;
+    color: #222;
+}
+
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+
+.introduction {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/* Back to Form button */
+
+.form-button {
+    display: inline-block;
+    padding: 10px 16px;
+    margin-bottom: 22px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+
+.form-button:hover {
+    background: #444;
+}
+
+
+/* Expand / Collapse buttons */
+
+.controls {
+    margin-bottom: 20px;
+}
+
+
+button {
+    padding: 9px 15px;
+    margin-right: 8px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background: #eeeeee;
+}
+
+
+/* Course sections */
+
+.course {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+
+.course summary {
+    padding: 16px 18px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.course summary:hover {
+    background: #f3f3f3;
+}
+
+
+.course-code {
+    margin-right: 8px;
+}
+
+
+.credits {
+    color: #666;
+    font-weight: normal;
+    margin-left: 4px;
+}
+
+
+.details {
+    border-top: 1px solid #e5e5e5;
+    padding: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
+
+.details p {
+    margin: 0;
+}
+
+
+/* Mobile display */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 18px 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .course summary {
+        font-size: 15px;
+        padding: 14px;
+    }
+
+    .details {
+        padding: 14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>Faculty Course Information</h1>
+
+
+<p class="introduction">
+Please review the course descriptions and contents before making your selections.
+</p>
+
+
+<button class="back-button" onclick="window.open('https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=iLC0KX3SKUG5-YY3tZ6kszsX4lZIv6hOmtKAFUOqEiRUNEZZUlFWTVBaNzJHTDdRWDdSUkhQUFM1TC4u', '_blank')">
+    Back to Course Preference Form
+</button>
+
+
+<div class="controls">
+
+<button onclick="expandAll()">
+    Expand All
+</button>
+
+<button onclick="collapseAll()">
+    Collapse All
+</button>
+
+</div>
+
+
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 200</span>
+            <span>Visual Communication for Urban Planners</span>
+            <span class="credits"> (0-6-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Graphic communication skills for urban planners; Techniques and applications of computer aided design in context of urban planning; seek, produce, manage, exchange graphical information in design process; introduction to Creative Suite applications for graphic communication and map making.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 201</span>
+            <span>Introduction to Smart &amp; Sustainable Cities</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Planning, definition of smart and sustainable cities; principles of sustainable urban planning and design and processes that develop and shape smart and sustainable cities; economic, social and environmental challenges facing urban areas; role of innovations in ICTs in shaping future cities; sustainability assessment tools and roles in forming smart, healthy, resilient, inclusive cities and quality of life.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 202</span>
+            <span>Sustainable Urbanization</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Concept/process of urbanization; theories/approaches of urban sustainable development; concept and measurements of sustainable urbanization/development in cities; urban sustainability initiatives in context of urban economies, land-use practices, urban nature and ethical perspectives; programs/policies to enhance sustainable urban development.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 203</span>
+            <span>Humanizing the Smart City</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Interactions of cyber-physical-human systems; framework for capturing interactions/dynamics in human-machine systems; applications in user case studies; smart cities initiatives and quality of life; technology-oriented initiatives/social innovation strategies focused on human-centered approaches, social exclusion and inequalities, international case studies.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 211</span>
+            <span>Land Use &amp; Environment</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Smart/sustainable land use; infrastructure systems and municipal/regional models; land use and sustainability paradigms; effects of urbanization on climate change/environment; city policies/action plans such as renewable energy, resilient water, green buildings, energy efficient transport, sustainable infrastructure.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 212</span>
+            <span>Urban Information Systems</span>
+            <span class="credits"> (2-2-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Principles of UIS/GIS; applications; attribute/spatial data structures; map projections; spatial analysis/cartographic production; location based services/Internet GIS; remote sensing/GPS; GIS planning/implementation; Saudi/international case studies.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 304</span>
+            <span>City Design I: Spatial Analysis</span>
+            <span class="credits"> (1-4-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Hands-on introduction to spatial analysis for city design; use spatial data to understand spatial patterns and inform design decisions; nature of spatial data; spatial analysis techniques; use of spatial data in city design.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 305</span>
+            <span>City Design II: Urban Form and Formation</span>
+            <span class="credits"> (1-4-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Hands-on exploration of urban form/formation, role of urban planning in shaping cities; history/types/factors of urban form; planning tools for shaping urban form.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 313</span>
+            <span>Urban System Modeling and Simulation</span>
+            <span class="credits"> (2-2-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Models/simulation tools for urban problems; land use, public facility siting, population analysis, resource allocation in congested settings, transportation networks; applied urban analysis; survey tools and techniques for primary/secondary data collection, processing, analysis.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC314</span>
+            <span>Urban Indicators Assessment</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Smart urban development indicators analysis; empirical evidence converted into informatics to improve planning/management decision making; Urban Observatories and service agencies; SDG 17 indicator collection/analysis/presentation local/regional/national vs international; linkage with regional plan assessment/national vision; statistical analysis and quantitative methods in city planning.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 321</span>
+            <span>Circular Economy</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Fundamentals of circular economy and circular business models; theoretical/empirical economic effects of urban environmental policies; costs/benefits of policies for air pollution, water quality, solid waste, climate change; economic valuation of environmental externality and circular urban development economy.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 331</span>
+            <span>Sustainable Infrastructure Systems</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Fundamentals of sustainable urban infrastructure; urban infrastructure development, energy, transportation, water, social infrastructure; approaches to sustainable infrastructure development; operations of technical infrastructure and policy/planning insights.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 399</span>
+            <span>Summer Training</span>
+            <span class="credits"> (0-0-1)</span>
+        </summary>
+
+        <div class="details">
+            <p>Continuous 8-week industry period in one semester to gain exposure/appreciation of Smart City Planning profession; on-the-job training in related areas; student writes detailed report emphasizing duties and gained skills/abilities.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 406</span>
+            <span>City Design III: Digital Urban Twin</span>
+            <span class="credits"> (1-4-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Hands-on digital urban twins in city design; 3D city models, real-time traffic simulations, energy use models; improved decision-making/collaboration/visualization; data collection, data quality, technical expertise.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 407</span>
+            <span>Senior Design Project</span>
+            <span class="credits"> (0-6-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Capstone integrating curriculum in comprehensive original project; approved smart/sustainable city planning topic supervised by instructor to demonstrate knowledge/skills from four years.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC422</span>
+            <span>Management of Smart Cities &amp; Governance</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Smart city management/governance for urban/infrastructure development; urban development/infrastructure management, accessibility/usability; ICT applications; citizen participation/representation; governance processes/tools; legal frameworks, negotiation, managerial/administrative processes.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 425</span>
+            <span>City Resilience &amp; Climate Change</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Climate change/cities and impacts on urban/natural/built environment; resilience/social-ecological resilience; mitigation/adaptation incl GHG, heat, air pollution; tools, city policies/action plans; green/sustainable infrastructure for adaptation.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 433</span>
+            <span>Smart Mobility</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Mobility/transportation trends; smart/seamless mobility; transport infrastructure/intramodality; smart mobility as element in sustainable urban transport; stakeholders; MaaS and case studies.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 434</span>
+            <span>Digital Transformation of Cities</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>History/terms/theories/methods of digitization effects on society/cities; technical design, usage patterns, mutual influence of digitization/society/cities; local/international case studies.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 481</span>
+            <span>Urban Ecology</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Consequences of urbanization on ecological processes; ecological features/impact of population increase and built-up expansion; nutrient cycling, urban greening, ecological landscaping, water features, flora/fauna, sustainable ecosystem planning.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 491</span>
+            <span>Artificial Intelligence in Smart Cities</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>AI in smart cities/urban mobility; AI enabling smart solutions in energy, water, waste, pollution, noise, traffic; technological/social/regulatory challenges; technology/data availability/reliability, lack of AI skills, ethical AI policy.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 441</span>
+            <span>Plan Evaluation and Appraisal</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Techniques/methods for assessment of plans/programs/public policies; cost effectiveness, goal achievement, cost benefit, cost revenue; pre/post implementation; development impact assessment, cost-benefit, environmental impact, balance sheet.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 423</span>
+            <span>Urban Policy Development &amp; Enactment</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Design of urban service systems; plans/design; legislative mandates/regulations; formal enactment; analytic/interactional skills for developing/enacting policies specifying urban planning/city service systems.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 419</span>
+            <span>Urban Code Development</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Urban Planning Code instances/documents/permits/sanctions; planning documents at national/regional/local/master plan to development/subdivision impacting neighborhood/housing envelopes; frontage, street elements, third place, landscaped areas; land use/subdivision actions; right of first refusal/expropriation.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 435</span>
+            <span>Sustainable Waste Recycling Systems</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Sustainable waste management across product lifecycle to reduce environmental/social/financial impacts; sustainable waste management and circular economy; best practices worldwide.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 426</span>
+            <span>City Business Development</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Business strategy/current developments/future opportunities; city trends/challenges; collective business responsibility; public/private partners; economically sustainable environment; wealth, clusters, diversification, commercial revenue; world-class best practices.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">SSC 471</span>
+            <span>Urban Livability</span>
+            <span class="credits"> (3-0-3)</span>
+        </summary>
+
+        <div class="details">
+            <p>Concept/principles/theory, metrics/rankings of urban livability; well-being parameters and spatial/policy mechanisms in public space/street design; local/international best practice livable cities.</p>
+        </div>
+    </details>
+    
+
+    <details class="course">
+        <summary>
+            <span class="course-code">ARC 358</span>
+            <span>Real Estate &amp; Housing Development</span>
+            <span class="credits"></span>
+        </summary>
+
+        <div class="details">
+            <p></p>
+        </div>
+    </details>
+    
+
+
+</div>
+
+
+<script>
+
+function expandAll() {
+
+    document.querySelectorAll(".course").forEach(function(course) {
+
+        course.open = true;
+
+    });
+
+}
+
+
+function collapseAll() {
+
+    document.querySelectorAll(".course").forEach(function(course) {
+
+        course.open = false;
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
